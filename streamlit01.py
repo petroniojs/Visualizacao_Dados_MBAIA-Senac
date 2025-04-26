@@ -4,7 +4,7 @@
 #**Faculdade Senac Pernambuco**
 ###MBA em Ciência de Dados e Inteligência Artificial - Turma: 2025
 ###Criação de um Data Storytelling com Streamlit
-Petrônio João da Silva
+#Petrônio João da Silva
 
 ________________________________________________________________________________
 ________________________________________________________________________________
