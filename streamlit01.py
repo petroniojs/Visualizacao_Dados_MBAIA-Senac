@@ -32,7 +32,6 @@ import seaborn as sb
 # SCIKIT-LEARN - utilização de Machine Learning, contendo uma variedade de algoritmos eficientes para inteligência artificial e modelagem estatística
 import sklearn as skl
 
-"""##Importação dos Dados a Serem Analisados"""
 
 #from google.colab import drive
 
