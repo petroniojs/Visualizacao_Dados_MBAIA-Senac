@@ -15,8 +15,10 @@ ________________________________________________________________________________
 ________________________________________________________________________________
 
 ##Importação de Bibliotecas
-"""
+
+# STREAMLIT - permite vincular e exibir todas a funções apontadas e publicar na rede mundial
 import streamlit as st
+
 # NUMPY - funções essencias para álgebra linear, manipulação de imagens e cálculos de arrays
 import numpy as np
 
@@ -32,12 +34,6 @@ import seaborn as sb
 # SCIKIT-LEARN - utilização de Machine Learning, contendo uma variedade de algoritmos eficientes para inteligência artificial e modelagem estatística
 import sklearn as skl
 
-
-#from google.colab import drive
-
-# Montar o Google Drive
-#drive.mount('/content/drive')
-
 # A variável "url" guarda do endereço do local onde os dados estão disponíveis
 url = 'machinery_data.csv'
 
@@ -49,17 +45,15 @@ df.head()
 
 df['Machine_Type'].value_counts()
 
-
-
 df.info()
 
 df.describe()
 
 manutencao = df.groupby(['Maintenance_Date']).agg(maquina = ('Machine_Type','sum'), falhas = ('Failures','sum'))
 
-plt.figure(figsize=(8, 6))
-plt.bar(manutencao.maquina, manutencao.falhas, color='red')
-plt.title('Falhas por Máquina')
-plt.xlabel('Máquina')
-plt.ylabel('N° de Falhas')
-plt.show()
+st.figure(figsize=(8, 6))
+st.bar(manutencao.maquina, manutencao.falhas, color='red')
+st.title('Falhas por Máquina')
+st.xlabel('Máquina')
+st.ylabel('N° de Falhas')
+st.show()
