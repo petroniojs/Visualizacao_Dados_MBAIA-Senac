@@ -43,7 +43,7 @@ df.describe()
 
 manutencao = df.groupby(['Maintenance_Date']).agg(maquina = ('Machine_Type','sum'), falhas = ('Failures','sum'))
 
-st.figure(figsize=(8, 6))
+st.plt.figure(figsize=(8, 6))
 st.bar(manutencao.maquina, manutencao.falhas, color='red')
 st.title('Falhas por Máquina')
 st.xlabel('Máquina')
