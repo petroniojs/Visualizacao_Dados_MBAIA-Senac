@@ -16,7 +16,7 @@ ________________________________________________________________________________
 
 ##Importação de Bibliotecas
 """
-
+import streamlit as st
 # NUMPY - funções essencias para álgebra linear, manipulação de imagens e cálculos de arrays
 import numpy as np
 
@@ -34,17 +34,17 @@ import sklearn as skl
 
 """##Importação dos Dados a Serem Analisados"""
 
-from google.colab import drive
+#from google.colab import drive
 
 # Montar o Google Drive
-drive.mount('/content/drive')
+#drive.mount('/content/drive')
 
 # A variável "url" guarda do endereço do local onde os dados estão disponíveis
-url = '/content/drive/MyDrive/Colab Notebooks/Meus.Trabalhos/machinery_data.csv'
+url = 'machinery_data.csv'
 
 # Criação do DataFrame a partir da leitura (importação) dos dados
 df = pd.read_csv(url, sep=',')
-
+st.write('Olá')
 # Exibição inicial dos dados
 df.head()
 
