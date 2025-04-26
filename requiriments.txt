@@ -1,3 +1,4 @@
 numpy
-pandasmatplotlib
+pandas
+matplotlib
 seabornsklearn
