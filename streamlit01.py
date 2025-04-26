@@ -6,9 +6,6 @@
 ###Criação de um Data Storytelling com Streamlit
 #Petrônio João da Silva
 
-________________________________________________________________________________
-________________________________________________________________________________
-
 ##Importação de Bibliotecas
 
 # STREAMLIT - permite vincular e exibir todas a funções apontadas e publicar na rede mundial
