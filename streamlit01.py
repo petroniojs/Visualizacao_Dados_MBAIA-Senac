@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 # MATPLOTLIB - fornece visualização de dados
-import matplotlib.pyplot as plt
+import matplotlib as plt
 
 # SEABORN - melhora a aparência dos gráficos do matplotlib
 import seaborn as sb
