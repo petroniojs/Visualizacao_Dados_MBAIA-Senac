@@ -76,12 +76,13 @@ st.markdown('### Além disso, é possível perceber que a temperatura não é um
 st.markdown('### Vejamos isso nos gráficos a seguir.')
 
 #Gráfico referente à Temperatura Média de Funcionamento das Máquinas
-plt.figure(figsize=(6, 4))
+fig0 = plt.figure(figsize=(6, 4))
 plt.bar(Manutencao.index, Manutencao.Temperatura_Media, color='red')
 plt.title('Temperatura Média das Máquinas')
 plt.xlabel('Máquina')
 plt.ylabel('Temperatura')
 plt.show()
+st.pyplot(fig0)
 
 #Dataframe para os valores e colunas relacionado à Média de Horas de Uso
 categorias = Manutencao.index
@@ -91,7 +92,7 @@ valores_MHU = Manutencao.Media_de_Horas_de_Uso.values
 valores_QTF = Manutencao.Total_de_Falhas.values
 
 #Construindo um subplots para que gere dois gráficos lado a lado
-fig, axs = plt.subplots(1, 2, figsize=(16, 6), sharey=True)
+fig1, axs = plt.subplots(1, 2, figsize=(16, 6), sharey=True)
 
 #Gráfico referente à Média de Horas de Uso
 axs[0].bar(categorias, valores_MHU, color='lightblue', edgecolor='black')
@@ -113,7 +114,7 @@ axs[1].grid(axis='y', linestyle='--', alpha=0.7)
 plt.suptitle('Comparação: Tempo de Funcionamento vs Número de Falhas', fontsize=16)
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.show()
-st.pyplot(fig)
+st.pyplot(fig1)
 
 st.markdown('# Conclusão')
 
