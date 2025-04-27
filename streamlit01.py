@@ -78,11 +78,10 @@ st.markdown('### Vejamos isso nos gráficos a seguir.')
 #Gráfico referente à Temperatura Média de Funcionamento das Máquinas
 plt.figure(figsize=(6, 4))
 plt.bar(Manutencao.index, Manutencao.Temperatura_Media, color='red')
-#st.bar_chart(Manutencao.index, Manutencao.Temperatura_Media, color='red')
 plt.title('Temperatura Média das Máquinas')
 plt.xlabel('Máquina')
 plt.ylabel('Temperatura')
-st.bar_chart(plt.show())
+plt.show()
 
 #Dataframe para os valores e colunas relacionado à Média de Horas de Uso
 categorias = Manutencao.index
@@ -114,6 +113,7 @@ axs[1].grid(axis='y', linestyle='--', alpha=0.7)
 plt.suptitle('Comparação: Tempo de Funcionamento vs Número de Falhas', fontsize=16)
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.show()
+st.pyplot(fig)
 
 st.markdown('# Conclusão')
 
