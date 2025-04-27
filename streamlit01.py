@@ -47,7 +47,7 @@ df2.drop('Machine_ID', axis = 1, inplace = True)
 df2.rename(columns= colunas, inplace = True)
 
 st.dataframe(df2.head())
-st.dataframe(df2.info())
+st.write(df2.info())
 st.dataframe(df2['Tipo_de_Maquina'].value_counts())
 
 st.markdown('### Há um número total de 200 registros e é possível perceber que uma mesma máquina aparece tantas vezes quantas forem as datas de manutenção, logo entende-se que o número de registros de uma máquina reflete a quantidade de manutenções que é feita nela.')
@@ -64,7 +64,7 @@ st.markdown('### O gráfico mostra que a máquina com maior número de manutenç
 # Conversão da coluna "Date" para formato de data
 df2.Data_de_Manutencao = pd.to_datetime(df2.Data_de_Manutencao)
 
-st.dataframe(df2.describe())
+df2.describe()
 
 Manutencao = df2.groupby(['Tipo_de_Maquina']).agg(Media_de_Horas_de_Uso = ('Horas_de_Uso','mean'), Temperatura_Media = ('Temperatura','mean'), Total_de_Falhas = ('Numero_de_Falhas', 'sum'))
 st.dataframe(Manutencao.head())
@@ -77,7 +77,8 @@ st.markdown('### Vejamos isso nos gráficos a seguir.')
 
 #Gráfico referente à Temperatura Média de Funcionamento das Máquinas
 plt.figure(figsize=(6, 4))
-plt.bar(Manutencao.index, Manutencao.Temperatura_Media, color='red')
+#plt.bar(Manutencao.index, Manutencao.Temperatura_Media, color='red')
+st.bar_chart(Manutencao.index, Manutencao.Temperatura_Media, color='red')
 plt.title('Temperatura Média das Máquinas')
 plt.xlabel('Máquina')
 plt.ylabel('Temperatura')
